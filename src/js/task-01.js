@@ -1,3 +1,5 @@
+const information = () => {
+
 const categoryLength = document.querySelectorAll("li.item");
 console.log("Number of categories:", categoryLength.length);
 
@@ -25,3 +27,6 @@ console.log("Category: ", thirdCategoryName);
 
 const thirdCategoryLength = document.querySelectorAll("li ul");
 console.log("Elements: ", thirdCategoryLength[2].children.length);
+}
+
+information()
