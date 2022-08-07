@@ -12,3 +12,28 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const addImages = (images) => {
+const listGallery = document.querySelector(".gallery");
+const markup = images
+    .map(
+        (technology) =>
+            `<li> <img 
+            src=${technology.url} 
+            alt='${technology.alt}' 
+            width="860">
+                        </li>`
+    )
+    .join("");
+
+listGallery.insertAdjacentHTML("beforeend", markup);
+
+const body = document.querySelector("body");
+body.insertAdjacentHTML("beforebegin", "<style></style>");
+
+const listStyle = document.querySelector(".gallery");
+listStyle.style.listStyle = "none";
+listStyle.style.padding = "15px";
+console.log(body);
+}
+addImages(images);
