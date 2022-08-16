@@ -7,13 +7,10 @@ const inputValue = document.querySelector("input#name-input");
 console.log(inputValue.placeholder);
 
 inputValue.addEventListener("input", (event) => {
-    if (event) {outputValue.textContent = event.currentTarget.value;
-    }});
-
-inputValue.addEventListener("blur", () => {
-    if (outputValue.textContent === '') {
+    if (event) {
+        outputValue.textContent = event.currentTarget.value;
+    }
+    if (outputValue.textContent === "") {
         outputValue.textContent = outputText;
     }
 });
-
-
