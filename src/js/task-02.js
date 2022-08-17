@@ -14,8 +14,8 @@ for (let i = 0; i < ingredients.length; i += 1) {
     listItem.classList.add("item");
     listItem.textContent = ingredients[i];
     ingredientsList.push(listItem.outerHTML);
+    console.log(ingredientsList);    
 }
-
 list.insertAdjacentHTML("beforeend", ingredientsList.join(""));
 
 
