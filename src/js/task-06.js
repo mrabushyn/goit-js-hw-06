@@ -1,20 +1,30 @@
 const inputEl = document.querySelector(`input#validation-input`);
 const inputDataLength = inputEl.dataset.length;
 
+function invalidClass() {
+    inputEl.classList.remove("valid");
+    inputEl.classList.add("invalid");
+}
+
+function validClass() {
+    inputEl.classList.remove("invalid");
+    inputEl.classList.add("valid");
+}
+
 inputEl.addEventListener("input", (event) => {
     const numberOfEnterSymbol = event.currentTarget.value.length;
-    if (event) {
-        inputEl.classList.add("valid");
-        console.log(inputEl);
-    }
-    inputDataLength != numberOfEnterSymbol
-        ? inputEl.classList.add("invalid")
-        : inputEl.classList.remove("invalid");
+    inputDataLength != numberOfEnterSymbol ? invalidClass() : validClass();
 });
 
 
 
 
+
+
+
+
+
+// console.log(Number.isNaN(inputLength));
 
 // if (numberOfEnterSymbol === inputDataLength) {
 //     inputEl.classList.replace("valid", "invalid");}
