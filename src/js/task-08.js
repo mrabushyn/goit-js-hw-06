@@ -9,7 +9,7 @@ function handleSubmit(event) {
     } = event.currentTarget;
     
     if (email.value === "" || password.value === "") {
-        alert("All fields must be filled");
+        return alert("All fields must be filled");
     }
     
     if (email.value !== "" && password.value !== "") {
